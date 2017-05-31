@@ -20,5 +20,19 @@ get '/primos' do
 end
 
 post '/primos' do
-  numero_ingresado = params[:x]
+  parametros = params[:x]
+  if parametros.match(/^(\d)+$/)
+  	numero_ingresado = parametros.to_i
+  	buscador = Factores_primos.new
+  	presentador = Presentador.new
+
+  	lista_de_factores_primos = buscador.buscar_factores_primos(numero_ingresado.to_i)
+  	presentador = presentador.mostrar_listado_descendente(lista_de_factores_primos)
+  	texto_a_mostrar = presentador.join(', ')
+  	body texto_a_mostrar
+  else
+  	status 400
+  	body "bad request"
+  end
+
 end
