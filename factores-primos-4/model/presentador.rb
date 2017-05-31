@@ -1,7 +1,11 @@
-def mostrarListadoAscendente(factoresPrimos)
-	factoresPrimos.sort
-end
+class Presentador
 
-def mostrarListadoDescendente(factoresPrimos)
-	factoresPrimos.sort.reverse	
+	def mostrar_listado_ascendente(factores_primos)
+	  factores_primos.sort
+	end
+
+	def mostrar_listado_descendente(factores_primos)
+	  factores_primos.sort.reverse	
+	end
+	
 end
