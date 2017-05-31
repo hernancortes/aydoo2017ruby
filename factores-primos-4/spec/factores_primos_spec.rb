@@ -17,11 +17,10 @@ describe 'Factores_primos' do
 		expect(factores_obtenidos[0]).to eq 3
 	end
 
-	it 'ingreso numero 360 y su factores primos son 2,2,2,3,3,5' do
+	it 'ingreso numero 360 y sus factores primos son 2,2,2,3,3,5' do
 		factores_obtenidos = factores_primos.buscar_factores_primos(360)
 		expect(factores_obtenidos.size).to eq 6
 		expect(factores_obtenidos).to eq [2,2,2,3,3,5]
 	end
-
 
 end
